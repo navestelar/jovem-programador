@@ -3,109 +3,115 @@ var nome, sobrenome, nomeCliente, nomeProduto: string;
 precoProduto,kmInicio,kmFinal,litros,valorTotal,peso,altura:real;
 a,b,c,n1,n2,n3,ano,tecla,qtd,horasTrabalhadas,dependentes:integer;
 Begin 
-	write('Créditos da ideia de fazer uma tabela: ');
+	write('Crï¿½ditos da ideia de fazer uma tabela: ');
 	textcolor(black);
 	textbackground(green);
 	writeln('Matheus Gemballa Gullini');
 	textcolor(green);
 	textbackground(black);
-	writeln('Digite um número para escolher um código ');
-	writeln('NÚMERO    CÓDIGO');
-	writeln('  1       apresentação');
+	writeln('Digite um nï¿½mero para escolher um cï¿½digo ');
+	writeln('Nï¿½MERO    Cï¿½DIGO');
+	writeln('  1       apresentaï¿½ï¿½o');
 	writeln('  2       nome');
 	writeln('  3       tabela alunos e notas');
-	writeln('  4       números aritmética');
-	writeln('  5       média');
+	writeln('  4       nï¿½meros aritmï¿½tica');
+	writeln('  5       mï¿½dia');
 	writeln('  6       idade');
 	writeln('  7       cliente');
-	writeln('  8       área');
-	writeln('  9       funcionário');
-	writeln(' 10       táxi');
+	writeln('  8       ï¿½rea');
+	writeln('  9       funcionï¿½rio');
+	writeln(' 10       tï¿½xi');
 	writeln(' 11       IMC');
 	writeln('--------------------------------------------------------------------------------');
 	readln(tecla);
-	writeln('O número escolhido foi: ',tecla);
+	writeln('O nï¿½mero escolhido foi: ',tecla);
   if (tecla=1) then begin
-    writeln('Olá, Mundo!'); 
-		writeln('Meu nome é: Ana Carolina Capistrano Huntemann');
-		writeln('Moro em Rio do Sul, no bairro Taboão');
-		write('Meu CEP é: 89160612');
-		writeln(' Meu número é: (47)99671-9671');
+    writeln('Olï¿½, Mundo!'); 
+		writeln('Meu nome ï¿½: Ana Carolina Capistrano Huntemann');
+		writeln('Moro em Rio do Sul, no bairro Taboï¿½o');
+		write('Meu CEP ï¿½: 89160612');
+		writeln(' Meu nï¿½mero ï¿½: (47)99671-9671');
   end  else if (tecla=2) then begin
-    write('Qual é o seu nome? ');
+    write('Qual ï¿½ o seu nome? ');
 		read(nome);
-		write('Qual é o seu sobrenome? ');
+		write('Qual ï¿½ o seu sobrenome? ');
 		read(sobrenome);
-		writeln('Seu nome completo é: ', nome,' ',sobrenome);
+		writeln('Seu nome completo ï¿½: ', nome,' ',sobrenome);
 	end else if (tecla=3) then begin
 	  writeln('ALUNO(A)     NOTA');
 		writeln('=======      ====');
 		writeln(' ALINE       9.0 ');
-		writeln(' MÁRIO       DEZ ');
-		writeln(' SÉRGIO      4.5 ');
+		writeln(' Mï¿½RIO       DEZ ');
+		writeln(' Sï¿½RGIO      4.5 ');
 		writeln('SHIRLEY      7.0 ');
 	end else if (tecla=4) then begin
-	 	writeln('Escreva dois números inteiros separados por ENTER ');
+	 	writeln('Escreva dois nï¿½meros inteiros separados por ENTER ');
 		read(a,b);
-		writeln('A soma dos números ',a ,' + ', b ,' é igual a: ', a+b);
-		writeln('A subtração dos números ',a ,' - ', b ,' é igual a: ', a-b);
-		writeln('A multiplicação dos números ',a ,' * ', b ,' é igual a: ', a*b);
-		writeln('A divisão dos números ',a ,' / ', b ,' é igual a: ', a/b);
+		writeln('A soma dos nï¿½meros ',a ,' + ', b ,' ï¿½ igual a: ', a+b);
+		writeln('A subtraï¿½ï¿½o dos nï¿½meros ',a ,' - ', b ,' ï¿½ igual a: ', a-b);
+		writeln('A multiplicaï¿½ï¿½o dos nï¿½meros ',a ,' * ', b ,' ï¿½ igual a: ', a*b);
+		writeln('A divisï¿½o dos nï¿½meros ',a ,' / ', b ,' ï¿½ igual a: ', a/b);
 	end else if (tecla=5) then begin
-	   write('Qual é o nome do aluno? ');
+	   write('Qual ï¿½ o nome do aluno? ');
 		readln(nome);
-		writeln('Escreva as três notas desse aluno espaçadas por ENTER ');
+		writeln('Escreva as trï¿½s notas desse aluno espaï¿½adas por ENTER ');
 		readln(n1,n2,n3);
-		writeln('O(a) aluno(a) ', nome, ' tirou a média ', (n1+n2+n3)/3);
+		writeln('O(a) aluno(a) ', nome, ' tirou a mï¿½dia ', (n1+n2+n3)/3);
 	end else if (tecla=6) then begin
-		 writeln('Em qual ano você nasceu? ');
+		 writeln('Em qual ano vocï¿½ nasceu? ');
 		read(ano);
-		writeln('Você tem ', 2023-ano, ' anos');
+		writeln('Vocï¿½ tem ', 2023-ano, ' anos');
 	end else if (tecla=7) then begin
 	   write('Cliente: ');
 	   read(nomeCliente);
 	   write('Produto: ');
 	   read(nomeProduto);
-	   write('Preço: ');
+	   write('Preï¿½o: ');
 	   read(precoProduto);
 	   write('Quantidade: ');
 	   read(qtd);
 	   writeln('O valor total da compra de ', qtd,' produtos por ',precoProduto,' reais cada, foi de: ',qtd*precoProduto,' ;'); 
 	   writeln('O cliente ',nomeCliente,' comprou o produto ',nomeProduto,' e gastou um total de ',qtd*precoProduto,' reais.');
   end else if (tecla=8) then begin
-  	writeln('Escreva três números inteiros separados por ENTER ');
+  	writeln('Escreva trï¿½s nï¿½meros inteiros separados por ENTER ');
   	readln(a,b,c);
-  	writeln('A área do triângulo de base ',a,' e altura ',c,' é: ',(a*c)/2);
-  	writeln('A área de um círculo de raio ',c,' é: ',3.14*c*c);
-  	writeln('A área do quadrado de lado ',b,' é: ',b*b);
+  	writeln('A ï¿½rea do triï¿½ngulo de base ',a,' e altura ',c,' ï¿½: ',(a*c)/2);
+  	writeln('A ï¿½rea de um cï¿½rculo de raio ',c,' ï¿½: ',3.14*c*c);
+  	writeln('A ï¿½rea do quadrado de lado ',b,' ï¿½: ',b*b);
   end else if (tecla=9) then begin
   	write('Nome: ');
 	  read(nome);
-	  write('Número de horas trabalhadas: ');
+	  write('Nï¿½mero de horas trabalhadas: ');
 	  read(horasTrabalhadas);
-	  write('Número de dependentes de um funcionário: ');
+	  write('Nï¿½mero de dependentes de um funcionï¿½rio: ');
 	  read(dependentes);
-	  writeln('O salário de ',nome,' é de ',(12*horasTrabalhadas)+(40*dependentes),' reais.');
+	  writeln('O salï¿½rio de ',nome,' ï¿½ de ',(12*horasTrabalhadas)+(40*dependentes),' reais.');
 	end else if (tecla=10) then begin
-		 write('Marcação do Odômetro (km) no início do dia: ');
+		 write('Marcaï¿½ï¿½o do Odï¿½metro (km) no inï¿½cio do dia: ');
 	   read(kmInicio);
-	   write('Marcação do Odômetro (km) no final do dia: ');
+	   write('Marcaï¿½ï¿½o do Odï¿½metro (km) no final do dia: ');
 	   read(kmFinal);
-	   write('Número de litros de combustível gasto: ');
+	   write('Nï¿½mero de litros de combustï¿½vel gasto: ');
 	   read(litros);
 	   write('Valor total (R$) recebido dos passageiros: ');
 	   read(valorTotal);
-	   writeln('A média do consumo é: ',(kmFinal-kmInicio)/litros,' km/L e o lucro líquido do dia é ',valorTotal-(4.90*litros));
+	   writeln('A mï¿½dia do consumo ï¿½: ',(kmFinal-kmInicio)/litros,' km/L e o lucro lï¿½quido do dia ï¿½ ',valorTotal-(4.90*litros));
 	end else if (tecla=11) then begin
 		 write('Peso: ');
 	   read(peso);
 	   write('Altura: ');
 	   read(altura);
-	   if ((peso/(altura*altura))<20) then begin
-     write
-    end    else begin
-      //comandos
-    end;
+	   if (peso/(altura*altura))<20 then begin
+        writeln('Abaixo do peso ideal');
+       end else if(peso/(atura*altura)>20 and peso/(altura*altura)<25) begin
+        writeln('Peso ideal');
+	   end else if (peso/(altura*altura)>25 and peso/(altura*altura)<30) then begin 
+	    writeln ('Sobrepeso');
+	   end else if (peso/(altura*altura)>30) then begin 
+	    write ('Obeso');
+	   end else begin
+	    writeln('Deu ruim');
+       end;
 	end else begin
   	writeln('tururu');
   end;
