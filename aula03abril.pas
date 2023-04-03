@@ -80,6 +80,6 @@ Begin
 		read(pMeia);
 		write('quantos idosos: ');
 		read(pNada);
-		write('O total faturado foi de ',pNormal+(pMeia/2),' dinheiros, o total de passageiros foi de ',pNormal+pMeia+pNada,' pessoas, a soma geral de dinheiro foi de ',pNormal+(pMeia/2),' dinheiros e a soma geral de passageiros foi de ',pNormal+pMeia+pNada,' passageiros.');
+		write('Considerando a passagem custando R$5,50, o total faturado foi de ',(pNormal+(pMeia/2))*5.5,' reais, o total de passageiros foi de ',pNormal+pMeia+pNada,' pessoas, a soma geral de dinheiro foi de ',(pNormal+(pMeia/2))*5.5,' reais e a soma geral de passageiros foi de ',pNormal+pMeia+pNada,' passageiros.');
 	end; 
 End.
