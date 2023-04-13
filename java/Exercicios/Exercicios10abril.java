@@ -1,5 +1,7 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Exercicios10abril {
     /**
@@ -21,6 +23,12 @@ public class Exercicios10abril {
         System.out.println("  9        MDC");
         System.out.println(" 10        MMC");
         System.out.println(" 11        Soma Array");
+        System.out.println(" 12        Menor valor Array");
+        System.out.println(" 13        Índice maior valor Array");
+        System.out.println(" 14        Quantidade de palavras repetidas Array HashMap");
+        System.out.println(" 15        Pares Array");
+        System.out.println(" 16        Ordem reversa Array");
+        System.out.println(" 17        String lista de índices Array Hashmap");
         System.out.println("---------------------------------------------------");
         System.out.println("Escolha seu código: ");
         codigo = code.nextInt();
@@ -128,20 +136,20 @@ public class Exercicios10abril {
         System.out.println("A soma dos dígitos do número "+n7+" é "+soma7);
         }else if (codigo==8){
             int n8 = 0;
-        int contador8 = 0;
-        Scanner input8 = new Scanner(System.in);
-        System.out.print("Escreva um número inteiro: ");
-        n8 = input8.nextInt();
-        for (int i=1;i<=n8;i++){
-            if(n8%i==0){
-                contador8++;
+            int contador8 = 0;
+            Scanner input8 = new Scanner(System.in);
+            System.out.print("Escreva um número inteiro: ");
+            n8 = input8.nextInt();
+            for (int i=1;i<=n8;i++){
+                if(n8%i==0){
+                    contador8++;
+                }
             }
-        }
-        if (contador8==2){
-            System.out.println("O número "+n8+" é primo");
-        }else {
-            System.out.println("O número "+n8+" não é primo.");
-        }
+            if (contador8==2){
+                System.out.println("O número "+n8+" é primo");
+            }else {
+                System.out.println("O número "+n8+" não é primo.");
+            }
         }else if (codigo==9){
             int n91, n92, mdc9 = 0;
             Scanner input91 = new Scanner(System.in);
@@ -200,7 +208,61 @@ public class Exercicios10abril {
             }
             System.out.println("O menor valor do Array "+Arrays.toString(numeros12)+" é "+menor12);
         }else if(codigo==131){
-            
+            int[] numeros13 = {5,3,9,2,1};
+            int indiceMaior13 = 0;
+            int maximo13 = numeros13[0];
+            for(int i13=0;i13<numeros13.length;i13++){
+             if(numeros13[i13]>numeros13[indiceMaior13]){
+                 indiceMaior13 = i13;
+                 maximo13 = numeros13[i13];
+             }
+            }
+            System.out.println("O índice do maior valor do Array "+Arrays.toString(numeros13)+" é "+indiceMaior13);
+        }else if (codigo==141){
+            String[] palavras14 = {"O","rato","roeu","a","roupa","do","rei","de","roma"};
+            HashMap<String, Integer>contagem14 = new HashMap<>();
+            for (String palavra14 :palavras14){
+                 if(contagem14.containsKey(palavra14)){
+                     contagem14.put(palavra14, contagem14.get(palavra14)+1);
+                 }else {
+                     contagem14.put(palavra14, 1);
+                 }
+            }
+            System.out.println("Contagem de palavras: "+contagem14);
+        }else if (codigo==151){
+            int[] numeros15 = {1,2,3,4,5};
+            int[] pares15 = new int[numeros15.length];
+            int aux15 = 0;
+            for (int i15 = 0; i15<numeros15.length;i15++){
+                if (numeros15[i15]%2==0){
+                    pares15[aux15] = numeros15[i15];
+                    aux15++;
+                }
+            }
+            System.out.println("Array original: "+Arrays.toString(numeros15));
+            System.out.println("Array de pares: "+Arrays.toString(Arrays.copyOf(pares15, aux15)));
+        }else if(codigo==161){
+            int[] numeros16 = {1,2,3,4,5};
+            int[] reverso16 = new int[numeros16.length];
+            for (int i16 = 0; i16<numeros16.length;i16++){
+                reverso16[numeros16.length - 1 -i16] = numeros16[i16];
+            }
+            System.out.println("Array original: "+Arrays.toString(numeros16));
+            System.out.println("Array de reverso: "+Arrays.toString(reverso16));
+        }else if(codigo==171){
+            String[] palavras17 = {"O","rato","roeu","a","roupa","do","rei","de","roma"};
+            HashMap<String,ArrayList<Integer>>indices17 = new HashMap<>();
+            for (int i17 = 0; i17<palavras17.length;i17++){
+                String palavra17 = palavras17[i17];
+                if (indices17.containsKey(palavra17)){
+                    indices17.get(palavra17).add(i17);
+                }else{
+                    ArrayList<Integer> lista17 = new ArrayList<>();
+                    lista17.add(i17);
+                    indices17.put(palavra17, lista17);
+                }
+            }
+            System.out.println("Índices das palavas: "+indices17);
         }
         else{
             System.out.println("Código inválido!");
