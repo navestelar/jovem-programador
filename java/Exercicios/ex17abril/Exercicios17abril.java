@@ -3,8 +3,12 @@ import java.util.HashMap;
 import java.util.Arrays;
 
 public class Exercicios17abril{
+    /**
+     * @param args
+     */
     public static void main (String[] args){
         int codigo,n,idade,i,contador = 0;
+        int inicio,fim,maiorInicio,maiorFim,tamanho,maiorTamanho = 0;
         float n1,n2,n3,media=0;
         String nome,nome2=" ";
         Scanner input = new Scanner(System.in);
@@ -18,6 +22,7 @@ public class Exercicios17abril{
         System.out.println("  7        Número primo");
         System.out.println("  8        Número perfeito");
         System.out.println("  9        Palavras repetidas Array HashMap");
+        System.out.println(" 10        Subaray decrescente");
         System.out.println("---------------------------------------------------");
         System.out.println("Escolha seu código: ");
         codigo = input.nextInt();
@@ -132,6 +137,40 @@ public class Exercicios17abril{
             }
             System.out.println("Contagem de palavras: "+contagem);
             inputFrase.close();
+        } else if (codigo==10){
+            int[] array = {1,2,3,2,1,5,6};
+            inicio = 0;
+            fim = 0;
+            maiorInicio = 0;
+            maiorFim = 0;
+            tamanho = 1;
+            maiorTamanho = 0;
+            for (i = 1;i<array.length;i++){
+                if (array[i]>=array[i-1]){
+                    fim = 1;
+                    tamanho++;
+                    if (tamanho>maiorTamanho){
+                        maiorTamanho = tamanho;
+                        maiorInicio = inicio;
+                        maiorFim = fim;
+                    }
+                }else {
+                    inicio = i;
+                    fim = i;
+                    tamanho = 1;
+                }
+            }
+    
+            int[] subarray = new int[maiorTamanho];
+            for (i = 0;i<maiorTamanho;i++){
+                subarray[i] = array[maiorInicio+1];
+            }
+    
+            System.out.println("O maior subarray não descrescente é: ");
+            for (i = 0;i<maiorTamanho;i++){
+                System.out.println(subarray[i]+" ");
+            }
+            System.out.println("com comprimento "+maiorTamanho);
         }
         else {
             System.out.println("Código inválido");
