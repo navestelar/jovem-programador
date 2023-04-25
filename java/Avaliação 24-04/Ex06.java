@@ -20,39 +20,42 @@ public class Ex06 {
         int b = 0;
         int c = 0;
         for (int i=0;i<n;i++){
-            System.out.print("Escreva o nome, idade e sexo da pessoa "+(i+1)+": ");
+            System.out.print("Escreva o nome da pessoa "+(i+1)+": ");
             nome[i] = input.next();
+            System.out.print("Escreva a idade pessoa "+(i+1)+": ");
             idade[i] = input.nextInt();
+            System.out.print("Escreva o sexo da pessoa "+(i+1)+": ");
             sexo[i] = input.next();
             if(idade[i]>idade[0]){
                 auxA[a]=i;
                 a++;
             }
-            if(sexo[i]=="mulher"){
+            if(sexo[i].contains("mulher")){
                 auxB[b]=i;
                 b++;
             }
-            if((sexo[i]=="homem") && idade[i]<21){
+            if((sexo[i].contains( "homem")) && idade[i]<21){
                 auxC[c]=i;
                 c++;
             }
         }
+        System.out.println("--------------------------------------------------------------------------------------");
         System.out.println("As pessoas mais velhas que a primeira pessoa são: ");
-        for (int i=0;i<a;i++){
-            System.out.print("Nome: "+nome[auxA[i]]+" ");
-            System.out.print("Idade: "+idade[auxA[i]]+" ");
-            System.out.println("Sexo: "+sexo[auxA[i]]+" ");
+        for (int x=0;x<a;x++){
+            System.out.print("Nome:"+nome[auxA[x]]+" ");
+            System.out.print("Idade:"+idade[auxA[x]]+" ");
+            System.out.println("Sexo:"+sexo[auxA[x]]+" ");
         }
-        System.out.println("--------------------------------");
+        System.out.println("---------------------------------------------------------------------------------------");
         System.out.println("Todas as mulheres são: ");
-        for (int i=0;i<b;i++){
-            System.out.print("Nome: "+nome[auxB[i]]+" ");
-            System.out.println("Idade: "+idade[auxB[i]]+" ");
+        for (int j=0;j<b;j++){
+            System.out.print("Nome:"+nome[auxB[j]]+" ");
+            System.out.println("Idade:"+idade[auxB[j]]+" ");
         }
-        System.out.println("-----------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------");
         System.out.println("Os homens menores de 21 são: ");
-        for (int i=0;i<b;i++){
-            System.out.print("Nome: "+nome[auxC[i]]+" ");
+        for (int k=0;k<b;k++){
+            System.out.println("Nome:"+nome[auxC[k]]+" ");
         }
         input.close();
     }

@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -29,5 +28,6 @@ public class Ex07 {
         System.out.println(Arrays.toString(pares));
         System.out.println("O maior valor lido foi: "+maior);
         System.out.println("O menor valor lido foi: "+menor);
+        input.close();
     }
 }
