@@ -23,7 +23,8 @@ public class Pessoa {
     }
     
     public Contato[] getContatos(String tipo){
-        // int j;
+        int j;
+        int a;
         // Contato getContatos[];
         // if (tipo.toLowerCase()=="email"){
         //     for (int i=0; i<max; i++){
